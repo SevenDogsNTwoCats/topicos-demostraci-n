@@ -1,0 +1,31 @@
+##>>>>>>>>>>>>>>>>>>>>>> de la web
+# build output
+Demo-CI-CD-Azure-AKS/dist/
+
+# generated types
+Demo-CI-CD-Azure-AKS/.astro/
+
+# dependencies
+Demo-CI-CD-Azure-AKS/node_modules/
+
+# logs
+Demo-CI-CD-Azure-AKS/npm-debug.log*
+Demo-CI-CD-Azure-AKS/yarn-debug.log*
+Demo-CI-CD-Azure-AKS/yarn-error.log*
+Demo-CI-CD-Azure-AKS/pnpm-debug.log*
+
+# environment variables
+Demo-CI-CD-Azure-AKS/.env
+Demo-CI-CD-Azure-AKS/.env.production
+
+# macOS-specific files
+Demo-CI-CD-Azure-AKS/.DS_Store
+
+# jetbrains setting folder
+Demo-CI-CD-Azure-AKS/.idea/
+
+##>>>>>>>>>>>>>>>>>>>>>> de selenium
+test/node_modules/
+
+##>>>>>>>>>>>>>>>>>>>>>> de la db
+pgdata/
