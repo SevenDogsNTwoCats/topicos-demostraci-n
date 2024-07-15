@@ -1,0 +1,132 @@
+---
+import Layout from "../layouts/Layout.astro";
+import StatsCard from "../layouts/StatsCard.astro";
+import ImageCarousel from "../layouts/ImageCarousel.astro";
+import DashCard from "../layouts/DashCard.astro";
+
+const images = [
+  {
+    src: "https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg",
+    alt: "Pizza",
+  },
+  {
+    src: "https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg",
+    alt: "Pizza",
+  },
+  {
+    src: "https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg",
+    alt: "Pizza",
+  },
+  {
+    src: "https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg",
+    alt: "Pizza",
+  },
+  {
+    src: "https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg",
+    alt: "Pizza",
+  },
+  {
+    src: "https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg",
+    alt: "Pizza",
+  },
+  {
+    src: "https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg",
+    alt: "Pizza",
+  },
+];
+
+const graphData1 = Array.from({ length: 5 }, () => Math.floor(Math.random() * 100));
+const graphData2 = Array.from({ length: 5 }, () => Math.floor(Math.random() * 100));
+const graphData3 = Array.from({ length: 5 }, () => Math.floor(Math.random() * 100));
+---
+
+
+<Layout title="DashBoard">
+  <main>
+    <div class="bg-gradient-to-b from-[#101212] relative to-[#1c0820]">
+      <section
+        class="relative lg:min-h-[100px] pt-24 pb-10 sm:pt-32 sm:pb-16 lg:pb-24"
+      >
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-20">
+            <h1 class="flex justify-center text-6xl font-bold sm:text-8xl">
+            <span
+              class="animated-gradient text-center text-transparent bg-clip-text bg-gradient-to-r from-[#7b29ff] to-white"
+            >
+              DashBoard
+            </span>
+            </h1>
+          <div class="max-w-xl mx-auto text-center">
+            <p class="mt-10 text
+            -base text-white sm:text-xl">
+              Bienvenido a tu panel de control.
+              Aquí podrás ver tus estadísticas de ventas y tus productos más vendidos.
+            </p>
+
+            <div
+              class="grid grid-cols-1 px-20 mt-12 text-left gap-x-12 gap-y-8 sm:grid-cols-3 sm:px-0"
+            >
+            <DashCard
+            imgSrc="products.svg"
+            text= "Productos"
+            link="/products"
+            />
+            <DashCard
+            imgSrc="sellers.svg"
+            text= "Ventas"
+            link="/sales"
+            />
+            <DashCard
+            imgSrc="secure.svg"
+            text= "Pedidos"
+            link="/orders"
+            />
+            <DashCard
+            imgSrc="products.svg"
+            text= "Productos"
+            link="/products"
+            />
+            <DashCard
+            imgSrc="sellers.svg"
+            text= "Ventas"
+            link="/sales"
+            />
+            <DashCard
+            imgSrc="secure.svg"
+            text= "Pedidos"
+            link="/orders"
+            />
+
+            </div>
+
+
+                     
+        </div>
+        </div>
+        </div>
+        </div>
+      </section>
+
+      <ImageCarousel images={images} />
+    </div>
+  </main>
+</Layout>
+<style>
+  @keyframes moveGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animated-gradient {
+    @apply bg-gradient-to-r from-[#ffffff] via-[#7b29ff] to-[#ff0095];
+    background-image: linear-gradient(to right, #fff494, #7b29ff, #ff0095, #ffffff);
+    background-size: 200% 200%;
+    animation: moveGradient 4s ease infinite;
+  }
+</style>
